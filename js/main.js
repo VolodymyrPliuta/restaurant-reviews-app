@@ -197,7 +197,22 @@ addMarkersToMap = (restaurants = self.restaurants) => {
     self.markers.push(marker);
   });
 
-} 
+}
+
+document.querySelectorAll('#cuisines-select, #neighborhoods-select').forEach((elem) => {
+  elem.addEventListener('change', () => {
+    const list = document.getElementById('restaurants-list')
+    setTimeout(function() {
+      if(list.childNodes.length === 0) {
+        list.style.padding = 0;
+      }
+      else {
+        list.style.padding = '30px 15px 60px';
+      }
+    },100)
+  })
+})
+
 /* addMarkersToMap = (restaurants = self.restaurants) => {
   restaurants.forEach(restaurant => {
     // Add marker to the map
