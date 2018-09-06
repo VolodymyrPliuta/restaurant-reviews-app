@@ -12,11 +12,6 @@ body {
 	margin: 0;
 	position:relative;
 }
-ul, li {
-	font-family: Arial, Helvetica, sans-serif;
-	font-size: 10pt;
-	color: #333;
-}
 a {
 	color: orange;
 	text-decoration: none;
@@ -131,6 +126,8 @@ nav h1 a {
 
 /* ====================== Restaurant Listing ====================== */
 #restaurants-list {
+  display: flex;
+  flex-flow: row wrap;
   background-color: #f3f3f3;
   list-style: outside none none;
   margin: 0;
@@ -138,6 +135,7 @@ nav h1 a {
   text-align: center;
 }
 #restaurants-list li {
+  flex: 1 1 calc(20% - 8px);
   background-color: #fff;
   border: 2px solid #ccc;
   font-family: Arial,sans-serif;
@@ -147,12 +145,21 @@ nav h1 a {
   text-align: left;
   width: 270px;
 }
+@media (max-width: 1024px) {
+  #restaurants-list li {
+    flex: 1 1 calc(30% - 8px);
+  }
+}
+@media (max-width: 640px) {
+  #restaurants-list li {
+    flex: 1 1 100%;
+  }
+}
 #restaurants-list .restaurant-img {
   background-color: #ccc;
   display: block;
   margin: 0;
   max-width: 100%;
-  min-height: 248px;
   min-width: 100%;
 }
 #restaurants-list li h1 {
@@ -181,7 +188,6 @@ nav h1 a {
   text-decoration: none;
   text-transform: uppercase;
 }
-
 /* ====================== Restaurant Details ====================== */
 .inside header {
   position: fixed;
@@ -273,3 +279,4 @@ nav h1 a {
 #restaurant-hours td {
   color: #666;
 }
+
