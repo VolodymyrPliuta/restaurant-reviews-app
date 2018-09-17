@@ -60,12 +60,13 @@ nav h1 a {
   text-transform: uppercase;
 }
 #breadcrumb {
-    padding: 10px 40px 16px;
+    padding: 5px 59px 1px;
+    display: block;
     list-style: none;
     background-color: #eee;
     font-size: 17px;
     margin: 0;
-    width: calc(50% - 80px);
+    width: 100%;
 }
 
 /* Display list items side by side */
@@ -216,6 +217,7 @@ nav h1 a {
   right: 0;
   top: 80px;
   width: 100%;
+  padding-top: 6em;
 }
 .inside #map {
   background-color: #ccc;
