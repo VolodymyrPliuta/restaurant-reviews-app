@@ -33,6 +33,10 @@ article, aside, canvas, details, figcaption, figure, footer, header, hgroup, men
   background-color: #f3f3f3;
   min-height: 100%;
 }
+.leaflet-top {
+  margin-top: 3em;
+  position: inherit !important;
+}
 #footer {
   background-color: #444;
   color: #aaa;
