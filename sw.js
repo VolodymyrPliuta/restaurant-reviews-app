@@ -2,7 +2,7 @@ console.log('Service worker executing');
 
 const version = 'v1::';
 
-const cacheList = [
+const cacheFiles = [
   '/index.html',
 	'/restaurant.html',
 	'/css/styles.css',
@@ -24,4 +24,10 @@ const cacheList = [
 //install
 self.addEventListener("install", (event) => {
   console.log('WORKER: installed');
+  event.waitUntil(
+    caches.open('v1').
+    then( (cache) => {
+      return cache.addAll(cacheFiles);
+    })
+  );
 });
