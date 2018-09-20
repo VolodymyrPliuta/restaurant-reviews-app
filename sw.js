@@ -22,7 +22,7 @@ const cacheFiles = [
 ];
 
 //install
-self.addEventListener("install", (event) => {
+self.addEventListener('install', (event) => {
   console.log('WORKER: installed');
   event.waitUntil(
     caches.open('v1').
@@ -31,3 +31,4 @@ self.addEventListener("install", (event) => {
     })
   );
 });
+
