@@ -304,4 +304,7 @@ nav h1 a {
 #restaurant-hours td {
   color: #666;
 }
-
+.bar {
+  height: 0;
+  text-align: left;
+}

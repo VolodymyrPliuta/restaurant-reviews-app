@@ -3,6 +3,7 @@ console.log('Service worker executing');
 const version = 'v1::';
 
 const cacheFiles = [
+  '/',
   '/index.html',
 	'/restaurant.html',
 	'/css/styles.css',
