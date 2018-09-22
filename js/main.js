@@ -204,10 +204,10 @@ addMarkersToMap = (restaurants = self.restaurants) => {
   console.log("ServiceWorker registration started")
   navigator.serviceWorker.register('/sw.js')
     .then((err) => {
-      console.log('SW error success' );
+      console.log('SW success' );
     })
     .catch((err) => {
-      console.log('SW error' + err);
+      console.log({err});
     })
 
 /* addMarkersToMap = (restaurants = self.restaurants) => {
