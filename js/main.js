@@ -187,6 +187,8 @@ createRestaurantHTML = (restaurant) => {
  * Add markers for current restaurants to the map.
  */
 addMarkersToMap = (restaurants = self.restaurants) => {
+
+  console.log("ServiceWorker registration started2")
   restaurants.forEach(restaurant => {
     // Add marker to the map
     const marker = DBHelper.mapMarkerForRestaurant(restaurant, self.newMap);
@@ -199,16 +201,14 @@ addMarkersToMap = (restaurants = self.restaurants) => {
 
 }
 
-if (navigator.serviceWorker) {
   console.log("ServiceWorker registration started")
   navigator.serviceWorker.register('/sw.js')
+    .then((err) => {
+      console.log('SW error success' );
+    })
     .catch((err) => {
       console.log('SW error' + err);
     })
-}
-else {
-  console.log("Service worker is not supported")
-}
 
 /* addMarkersToMap = (restaurants = self.restaurants) => {
   restaurants.forEach(restaurant => {
