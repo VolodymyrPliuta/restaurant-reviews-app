@@ -9,7 +9,7 @@ class DBHelper {
    */
   static get DATABASE_URL() {
     const port = 443 // Change this to your server port
-    return `https://mock-vladamir-pizza.herokuapp.com:${port}/data/restaurants.json`;
+    return `https://restaurant-reviewer.herokuapp.com:${port}/data/restaurants.json`;
 
     // const port = 8000 // Change this to your server port
     // return `http://localhost:${port}/data/restaurants.json`;
