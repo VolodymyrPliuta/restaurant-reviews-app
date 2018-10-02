@@ -31,7 +31,7 @@
     "gulp-sass": "^3.1.0",
     "gulp-sourcemaps": "^1.5.2",
     "gulp-util": "^3.0.6",
-    "handlebars": "^3.0.3",
+    "handlebars": "^4.0.0",
     "hbsfy": "^2.2.1",
     "hbsify": "^1.0.1",
     "idb": "^1.0.1",
